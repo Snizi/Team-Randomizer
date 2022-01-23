@@ -36,31 +36,22 @@
 
     <script>
         let player_list =  new URLSearchParams(window.location.search).get("p").split(",")
-        const shuffledArray = player_list.sort((a, b) => 0.5 - Math.random());
+        let shuffledArray = player_list.sort((a, b) => 0.5 - Math.random());
+        let lanes = ["top", "mid", "jg", "adc", "sup"]
         console.log(shuffledArray)
 
-        let table = document.getElementById("players")
-        let row1 = table.insertRow(1);
-        let row2 = table.insertRow(2);
-        let row3 = table.insertRow(3);
-        let row4 = table.insertRow(4);
-        let row5 = table.insertRow(5);
-        
-        row1.insertCell(0).innerHTML = shuffledArray[0] + " - top";
-        row1.insertCell(1).innerHTML = shuffledArray[1] + " - top";
+        let table = document.getElementById("players")            
 
-        row2.insertCell(0).innerHTML = shuffledArray[2] + " - mid";
-        row2.insertCell(1).innerHTML = shuffledArray[3] + " - mid";
-        
-        row3.insertCell(0).innerHTML = shuffledArray[4] + " - jg";
-        row3.insertCell(1).innerHTML = shuffledArray[5] + " - jg"
+        for (let i = 1; i < 6; i++) {
+           
+            let row = table.insertRow(i);
+            row.insertCell(0).innerHTML = shuffledArray[0] + " - " + lanes[0]
+            shuffledArray.splice(0, 1)
+            row.insertCell(1).innerHTML = shuffledArray[0] + " - " + lanes[0]
+            lanes.splice(0, 1)
+            shuffledArray.splice(0, 1)
+        }        
 
-        row4.insertCell(0).innerHTML = shuffledArray[6] + " - adc";
-        row4.insertCell(1).innerHTML = shuffledArray[7] + " - adc";
-
-        row5.insertCell(0).innerHTML = shuffledArray[8] + " - sup";
-        row5.insertCell(1).innerHTML = shuffledArray[9] + " - sup";
-    
     </script>
 </body>
 </html>
