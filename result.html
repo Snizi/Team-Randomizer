@@ -46,40 +46,21 @@
         let row4 = table.insertRow(4);
         let row5 = table.insertRow(5);
         
-        let cell1_row1 = row1.insertCell(0);
-        let cell2_row1 = row1.insertCell(1);
+        row1.insertCell(0).innerHTML = shuffledArray[0] + " - top";
+        row1.insertCell(1).innerHTML = shuffledArray[1] + " - top";
 
-        cell1_row1.innerHTML = shuffledArray[0] + " - top"; 
-        cell2_row1.innerHTML = shuffledArray[1] + " - top"
-
-        let cell1_row2 = row2.insertCell(0)
-        let cell2_row2 = row2.insertCell(1)
-
-        cell1_row2.innerHTML = shuffledArray[2] + " - mid"; 
-        cell2_row2.innerHTML = shuffledArray[3] + " - mid";   
-
-        let cell1_row3 = row3.insertCell(0)
-        let cell2_row3 = row3.insertCell(1)
-
-        cell1_row3.innerHTML = shuffledArray[4] + " - jungle"
-        cell2_row3.innerHTML = shuffledArray[5] + " - jungle"  
-
-        let cell1_row4 = row4.insertCell(0)
-        let cell2_row4 = row4.insertCell(1)
-
-        cell1_row4.innerHTML = shuffledArray[6] + " - adc"
-        cell2_row4.innerHTML = shuffledArray[7] + " - adc"
-
-        let cell1_row5 = row5.insertCell(0)
-        let cell2_row5 = row5.insertCell(1)
-
-        cell1_row5.innerHTML = shuffledArray[8] + " - sup"
-        cell2_row5.innerHTML = shuffledArray[9] + " - sup"
-
-        // Add some text to the new cells:
+        row2.insertCell(0).innerHTML = shuffledArray[2] + " - mid";
+        row2.insertCell(1).innerHTML = shuffledArray[3] + " - mid";
         
-        
-              
+        row3.insertCell(0).innerHTML = shuffledArray[4] + " - jg";
+        row3.insertCell(1).innerHTML = shuffledArray[5] + " - jg"
+
+        row4.insertCell(0).innerHTML = shuffledArray[6] + " - adc";
+        row4.insertCell(1).innerHTML = shuffledArray[7] + " - adc";
+
+        row5.insertCell(0).innerHTML = shuffledArray[8] + " - sup";
+        row5.insertCell(1).innerHTML = shuffledArray[9] + " - sup";
+    
     </script>
 </body>
 </html>
